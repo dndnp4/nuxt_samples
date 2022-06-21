@@ -43,6 +43,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -69,7 +70,11 @@ export default {
       }
     }
   },
-
+  server: {
+    port : 8015,
+    host : '0.0.0.0',
+    timing: false
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
